@@ -2,6 +2,7 @@ import './App.css';
 import HomepageImage from './components/HomepageImage' 
 import HandTrack from './components/HandTrack'
 
+//To do: Incorporate HandTrack.js into this file. Figure out handTrack API
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <p>
           Box Ninja
         </p>
-        <HandTrack/> 
+
       </header>
     </div>
   );
