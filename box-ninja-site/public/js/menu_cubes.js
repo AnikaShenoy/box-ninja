@@ -11,7 +11,7 @@ camera.position.z=5;
 
 //Menu Cube
 const geometry_menu = new THREE.BoxGeometry();
-const texture_menu = new THREE.TextureLoader().load("images/menu.png")
+const texture_menu = new THREE.TextureLoader().load("images/play.png")
 const material_menu = new THREE.MeshBasicMaterial( { 
     color: 0x00ff00,
     map: texture_menu,
