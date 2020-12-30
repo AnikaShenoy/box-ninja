@@ -22,9 +22,14 @@ html{
 h1 {
     background-color: black;
     padding: 1em;
-    font-size: 4em;
+    font-size: 16px;
+    font-size: 4vw;
     color: rgba(255,255,255,.75);
     font-family: "Bungee", Bungee Shade;
     text-align: center;
 }
 
+.hand_robot {
+    width: 100%;
+    height: 100%;
+}

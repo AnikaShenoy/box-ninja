@@ -3,6 +3,8 @@
     Sources:
     https://threejs.org/docs/ 
     https://medium.com/@mimiscott94/bouncing-shapes-a-three-js-tutorial-a867688c72a 
+
+    Robot Hand Image Credit: Image by <a href="https://pixabay.com/users/kalhh-86169/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4661729">kalhh</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4661729">Pixabay</a>
 -->
 <html>
 	<head>
@@ -12,9 +14,17 @@
 	</head>
 	<body>
         <h1 id="title">Box Ninja</h1>
-        <script src="src/index.js"></script>
         <script src="js/three.js"></script>
-        <script type="text/javascript" src="js/menu_cubes.js"></script>
+        <script src="js/menu_cubes.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/handtrackjs/dist/handtrack.min.js"></script>
+        <img id="hand_robot" src="images/hand_robot.png">
         
+        <!-- Temporary: Follow Mouse -->
+        <script src=js/hand_mouse.js></script> -->
+        
+        <!-- Instructs onscreen hand to follow the player's hand using handtrack.js 
+        <script src="https://cdn.jsdelivr.net/npm/handtrackjs/dist/handtrack.min.js"> </script>
+        <script src=js/hand.js></script> -->
+
 	</body>
 </html>
