@@ -9,7 +9,6 @@ scene.background = new THREE.Color("black");
 const camera = new THREE.PerspectiveCamera( 90, window.innerWidth / window.innerHeight, 0.1, 1000 );
 const renderer = new THREE.WebGLRenderer();
 document.body.appendChild( renderer.domElement );
-renderer.setSize( container.clientWidth, container.clientHeight);
 camera.position.z=5;
 
 
@@ -49,6 +48,8 @@ let up_i = true;
 
 function animate(){
     requestAnimationFrame (animate);
+    renderer.setSize( container.clientWidth, container.clientHeight);
+
     // rotation and position of centroid of both cubes
     cube_menu.rotation.x -= 0.02;
     cube_menu.rotation.y -= 0.02;

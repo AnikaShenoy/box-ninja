@@ -1,5 +1,3 @@
-// REPLACE WITH HANDTRACK
-
 // Mouse Control Source: https://stackoverflow.com/questions/7143806/make-an-image-follow-mouse-pointer 
 // (this will be unnecessary in final product)
 

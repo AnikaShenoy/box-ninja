@@ -8,6 +8,9 @@
 input, select {
     vertical-align: mmiddle;
 }
+body {
+    background-color: black;
+}
 
 html{
     min-height: 100%;
@@ -24,29 +27,31 @@ h1 {
     text-align: center;
 }
 
-/* .outer {
+
+body, .outer {
     position: relative;
     width: 100%;
     padding-bottom: 100;
-} */
+}
 
-body, #flex-container {
+body, .outer, #flex-container {
     position: absolute;
     width:100%;
-    margin: 0;
     padding-bottom: 100;
-    padding: 10;
     
 }
 
 #hand {
     width: 10%;
-    
 }
 
-#container {
-    margin: 0px auto;
-    width: 500px;
-    height: 375px;
-    border: 10px #333 solid;
+
+#videoElement {
+    /* Source for flipping video: http://jsfiddle.net/DuT9U/1/ */
+    position: absolute;
+    padding-bottom: 5%;
+    bottom: 0;
+    transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+    -moz-transform:rotateY(180deg); /* Firefox */
 }
