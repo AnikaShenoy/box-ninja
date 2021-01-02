@@ -73,6 +73,7 @@
                 // by default, object is added to coordinates (0,0,0), but can be changed:
                 cube.position.x = coordinates[0];
                 cube.position.y = coordinates[1];
+                cube.position.z = -5;
 
                 return cube;
 
@@ -80,11 +81,7 @@
 
             // initializing variables
             var geometry = new THREE.BoxGeometry(1, 1, 1);
-            // array to append cubes as needed
-            var cubes = [
-                makeShape(geometry, 0x44aa88, [0,0]),
-            ];
-            // colours for the cubes
+            // array to randomize colours for the cubes
             var colours = [
                 0x8844aa,
                 0xaa8844,
@@ -92,11 +89,25 @@
                 0x74ee15,
                 0xffe700,
                 0xf000ff,
-                0x001eff
+                0x001eff,
+                0xFF0000,
+                0xFFFF00,
+                0x00FF00
             ];
-        //TODO: add different speeds for the cubes
+            // array to randomize speeds for the cubes 
             var speeds = [
-
+                0.1,
+                0.15,
+                0.2,
+                0.12,
+                0.18,
+                0.19,
+                0.25,
+                0.22
+            ];
+            // array to append cubes as needed
+            var cubes = [
+                makeShape(geometry, colours[Math.floor(Math.random()*10)], [0,0]),
             ];
             
             // this creates a loop that will keep on rendering the app everytime the page refreshes
@@ -104,26 +115,26 @@
                 time *= 0.001 // convert time from milliseconds to seconds
 
                 // randomly generate colour for the cube
-                var colour = colours[Math.floor(Math.random()*7)];
+                var colour = colours[Math.floor(Math.random()*10)];
 
         // TODO: better adjust where the cubes appear (so not going off screen)
         // TODO: randomize the cubes a bit more (using Math.random instead of time??)
-
+                
                 // these if-statements "randomly" generate the cubes and the cube's placement
                 if (time % 4 < 0.01) {
-                    cubes.push(makeShape(geometry, colour, [Math.random()*5, Math.random()*3]))
+                    cubes.push(makeShape(geometry, colour, [Math.random()*4, Math.random()*2]))
                     console.log(cubes);
                 }
-                else if (time % 3 < 0.02) {
-                    cubes.push(makeShape(geometry, colour, [Math.random()*-5, Math.random()*-3]))
+                else if (time % 3 < 0.01) {
+                    cubes.push(makeShape(geometry, colour, [Math.random()*-4, Math.random()*-2]))
                     console.log(cubes);
                 }
-                else if (time % 5 < 0.02) {
-                    cubes.push(makeShape(geometry, colour, [Math.random()*-5, Math.random()*3]))
+                else if (time % 5 < 0.01) {
+                    cubes.push(makeShape(geometry, colour, [Math.random()*-4, Math.random()*2]))
                     console.log(cubes);
                 }
                 else if (time % 2 < 0.01) {
-                    cubes.push(makeShape(geometry, colour, [Math.random()*5, Math.random()*-3]))
+                    cubes.push(makeShape(geometry, colour, [Math.random()*4, Math.random()*-2]))
                     console.log(cubes);
                 }
                 /*
@@ -132,7 +143,6 @@
                     cube.translateZ(0.1);
                 }
                 */
-                
                 
                 cubes.forEach((cube, index) => {  // => is just a way to shorten the syntax
                     // change the speed for each cube
@@ -145,7 +155,7 @@
                     //cube.rotation.z = rot;
                     
                     //cube.translateY(speed);
-                    cube.translateZ(0.07);
+                    cube.translateZ(speeds[Math.floor(Math.random()*8)]);
                 });
                 
                 
