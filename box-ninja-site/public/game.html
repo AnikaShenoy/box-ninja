@@ -52,8 +52,8 @@
             // PerspectiveCamera mimics the way humans see a scene
             // 75 --> FOV (in degrees)
             // IW/IH --> aspect ratio
-            // 0.1 --> near, 1000 --> far; this means that objects closer / farther won't be rendered
-            var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            // 0.1 --> near, 500 --> far; this means that objects closer / farther won't be rendered
+            var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 500);
             // moving camera out in z-plane
             camera.position.z = 5;
 
@@ -73,26 +73,27 @@
                 // by default, object is added to coordinates (0,0,0), but can be changed:
                 cube.position.x = coordinates[0];
                 cube.position.y = coordinates[1];
-                cube.position.z = -5;
+                cube.position.z = -10;
 
                 return cube;
 
             }
 
-            // initializing variables
+            // creating the cube geometry
             var geometry = new THREE.BoxGeometry(1, 1, 1);
             // array to randomize colours for the cubes
             var colours = [
                 0x8844aa,
-                0xaa8844,
                 0x4deeea,
                 0x74ee15,
                 0xffe700,
                 0xf000ff,
                 0x001eff,
                 0xFF0000,
-                0xFFFF00,
-                0x00FF00
+                0xC724B1,
+                0xfeaf2f,
+                0xfe17a2,
+                0x40e0d0
             ];
             // array to randomize speeds for the cubes 
             var speeds = [
@@ -102,12 +103,12 @@
                 0.12,
                 0.18,
                 0.19,
-                0.25,
-                0.22
+                0.15,
+                0.13
             ];
             // array to append cubes as needed
             var cubes = [
-                makeShape(geometry, colours[Math.floor(Math.random()*10)], [0,0]),
+                makeShape(geometry, colours[Math.floor(Math.random()*11)], [0,0]),
             ];
             
             // this creates a loop that will keep on rendering the app everytime the page refreshes
@@ -117,44 +118,61 @@
                 // randomly generate colour for the cube
                 var colour = colours[Math.floor(Math.random()*10)];
 
-        // TODO: better adjust where the cubes appear (so not going off screen)
-        // TODO: randomize the cubes a bit more (using Math.random instead of time??)
+
+        //TODO: decide on which way of randomizing cubes is better
                 
-                // these if-statements "randomly" generate the cubes and the cube's placement
+            //option 1:
+                // these if-statements "randomly" generate the cubes and the cube's location
+                //  since based on time, the intervals are more even
                 if (time % 4 < 0.01) {
-                    cubes.push(makeShape(geometry, colour, [Math.random()*4, Math.random()*2]))
+                    cubes.push(makeShape(geometry, colour, [Math.random()*5, Math.random()*2.5]))
                     console.log(cubes);
                 }
                 else if (time % 3 < 0.01) {
-                    cubes.push(makeShape(geometry, colour, [Math.random()*-4, Math.random()*-2]))
+                    cubes.push(makeShape(geometry, colour, [Math.random()*-5, Math.random()*-2.5]))
                     console.log(cubes);
                 }
                 else if (time % 5 < 0.01) {
-                    cubes.push(makeShape(geometry, colour, [Math.random()*-4, Math.random()*2]))
+                    cubes.push(makeShape(geometry, colour, [Math.random()*-5, Math.random()*2.5]))
                     console.log(cubes);
                 }
                 else if (time % 2 < 0.01) {
-                    cubes.push(makeShape(geometry, colour, [Math.random()*4, Math.random()*-2]))
+                    cubes.push(makeShape(geometry, colour, [Math.random()*5, Math.random()*-2.5]))
                     console.log(cubes);
                 }
+                
+            // option 2:
+               // since truly random, intervals can be uneven
                 /*
-                if (Math.random() < 0.1) {
-                    var cube = cubes[Math.floor(Math.random() * 5)];
-                    cube.translateZ(0.1);
+                var random = Math.random() / 1.5;
+                if (random < 0.001) {
+                    cubes.push(makeShape(geometry, colour, [Math.random()*5, Math.random()*2.5]));
+                }
+                else if (random > 0.001 && Math.random() < 0.002) {
+                    cubes.push(makeShape(geometry, colour, [Math.random()*-5, Math.random()*-2.5]));
+                }
+                else if (random > 0.002 && Math.random() < 0.003) {
+                    cubes.push(makeShape(geometry, colour, [Math.random()*-5, Math.random()*2.5]))
+                }
+                else if (random > 0.003 && Math.random() < 0.004) {
+                    cubes.push(makeShape(geometry, colour, [Math.random()*5, Math.random()*-2.5]))
                 }
                 */
                 
+
+                // this sets the speed of each cube (because we're translating it by a bit
+                //  in each frame)
                 cubes.forEach((cube, index) => {  // => is just a way to shorten the syntax
-                    // change the speed for each cube
-                    
+                    /*
                     const speed = 0.1 + index * 0.05; 
-                    
                     const rot = time * 0.5;
-                    //cube.rotation.x = rot;
-                    //cube.rotation.y = rot;
-                    //cube.rotation.z = rot;
-                    
-                    //cube.translateY(speed);
+                    cube.rotation.x = rot;
+                    cube.rotation.y = rot;
+                    cube.rotation.z = rot;
+                    cube.translateY(speed);
+                    */
+
+                    // speed is randomly chosen from the array of possible speeds
                     cube.translateZ(speeds[Math.floor(Math.random()*8)]);
                 });
                 
