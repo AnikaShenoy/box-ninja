@@ -34,6 +34,13 @@
             //      renderer.setSize(window.innerWidth, window.InnerHeight);
             //      document.body.appendChild(renderer.domElement);
 
+            // trying to make raycaster work
+            var raycaster = new THREE.Raycaster();
+            let intersectedBox;
+
+            // REMOVE when implementing handtrack
+            document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+
             // need 3 things to display with three.js --> scene, camera, renderer
             // create a new scene
             var scene = new THREE.Scene();
@@ -76,6 +83,18 @@
                 cube.position.z = -10;
 
                 return cube;
+
+            }
+
+            // REMOVE when implemented handtrack
+            // create mouse vector and track movement
+            const mouse = new THREE.Vector2();
+            function onDocumentMouseMove( event ) {
+
+                event.preventDefault();
+
+                mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+                mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
 
             }
 
@@ -124,19 +143,19 @@
             //option 1:
                 // these if-statements "randomly" generate the cubes and the cube's location
                 //  since based on time, the intervals are more even
-                if (time % 4 < 0.01) {
+                if (time % 5 < 0.02) {
                     cubes.push(makeShape(geometry, colour, [Math.random()*5, Math.random()*2.5]))
                     console.log(cubes);
                 }
-                else if (time % 3 < 0.01) {
+                else if (time % 4 < 0.02) {
                     cubes.push(makeShape(geometry, colour, [Math.random()*-5, Math.random()*-2.5]))
                     console.log(cubes);
                 }
-                else if (time % 5 < 0.01) {
+                else if (time % 3 < 0.02) {
                     cubes.push(makeShape(geometry, colour, [Math.random()*-5, Math.random()*2.5]))
                     console.log(cubes);
                 }
-                else if (time % 2 < 0.01) {
+                else if (time % 2 < 0.02) {
                     cubes.push(makeShape(geometry, colour, [Math.random()*5, Math.random()*-2.5]))
                     console.log(cubes);
                 }
@@ -175,7 +194,22 @@
                     // speed is randomly chosen from the array of possible speeds
                     cube.translateZ(speeds[Math.floor(Math.random()*8)]);
                 });
-                
+
+                // setting up raycaster and finding intersections (where mouse vector intersects with box)
+				raycaster.setFromCamera( mouse, camera );
+                const intersects = raycaster.intersectObjects( scene.children );
+
+                if (intersects.length > 0) {
+                    // when mouse is over the box, it is removed from scene
+                    if (intersectedBox != intersects[0].object ) {
+                        intersectedBox = intersects[ 0 ].object;
+                        scene.remove(intersectedBox);
+                    }
+
+                } else {
+                    // set intersected box to null
+                    intersectedBox = null;
+                }
                 
                 // this actually draws the scene
                 renderer.render(scene, camera);
