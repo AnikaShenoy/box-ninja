@@ -1,16 +1,14 @@
-// REPLACE WITH HANDTRACK
-
-// Source: https://stackoverflow.com/questions/7143806/make-an-image-follow-mouse-pointer 
+// Mouse Control Source: https://stackoverflow.com/questions/7143806/make-an-image-follow-mouse-pointer 
 // (this will be unnecessary in final product)
 
 function getMouseCoords(e) {
     var e = e || window.event;
-    document.getElementById('hand_robot').innerHTML = e.clientX + ', ' + e.clientY + '<br>' + e.screenX + ', ' + e.screenY;
+    document.getElementById('hand').innerHTML = e.clientX + ', ' + e.clientY + '<br>' + e.screenX + ', ' + e.screenY;
   }
   
   
   var followCursor = (function() {
-    var hand = document.getElementById('hand_robot');
+    var hand = document.getElementById('hand');
     hand.style.position = "absolute";
   
     return {
@@ -20,8 +18,8 @@ function getMouseCoords(e) {
   
       run: function(e) {
         var e = e || window.event;
-        hand.style.left  = e.clientX + 'px';
-        hand.style.top = e.clientY + 'px';
+        hand.style.left  = (e.clientX - 30)+ 'px';
+        hand.style.top = (e.clientY - 20) + 'px';
         getMouseCoords(e);
       }
     };

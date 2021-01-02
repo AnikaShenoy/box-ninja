@@ -1,17 +1,20 @@
+import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/build/three.module.js';
+
+const container = document.querySelector("#flex-container");
+
 
 //set up scene
 const scene = new THREE.Scene();
 scene.background = new THREE.Color("black");
 const camera = new THREE.PerspectiveCamera( 90, window.innerWidth / window.innerHeight, 0.1, 1000 );
 const renderer = new THREE.WebGLRenderer();
-renderer.setSize( window.innerWidth, window.innerHeight);
 document.body.appendChild( renderer.domElement );
 camera.position.z=5;
 
 
 //Menu Cube
 const geometry_menu = new THREE.BoxGeometry();
-const texture_menu = new THREE.TextureLoader().load("images/menu.png")
+const texture_menu = new THREE.TextureLoader().load("images/play.png")
 const material_menu = new THREE.MeshBasicMaterial( { 
     color: 0x00ff00,
     map: texture_menu,
@@ -45,6 +48,8 @@ let up_i = true;
 
 function animate(){
     requestAnimationFrame (animate);
+    renderer.setSize( container.clientWidth, container.clientHeight);
+
     // rotation and position of centroid of both cubes
     cube_menu.rotation.x -= 0.02;
     cube_menu.rotation.y -= 0.02;

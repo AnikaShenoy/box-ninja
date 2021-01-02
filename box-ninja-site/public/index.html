@@ -4,27 +4,30 @@
     https://threejs.org/docs/ 
     https://medium.com/@mimiscott94/bouncing-shapes-a-three-js-tutorial-a867688c72a 
 
-    Robot Hand Image Credit: Image by <a href="https://pixabay.com/users/kalhh-86169/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4661729">kalhh</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4661729">Pixabay</a>
 -->
 <html>
 	<head>
 		<meta charset="utf-8">
 		<title>Box Ninja | Menu</title>
         <link rel="stylesheet" href="index.css">
+        <script type="module" src="js/menu_cubes.js" rel="script"></script>
+        <script src="https://cdn.jsdelivr.net/npm/handtrackjs/dist/handtrack.min.js"></script>
+        <script type="text/javascript" src="src/index.js"></script>
+
 	</head>
 	<body>
         <h1 id="title">Box Ninja</h1>
-        <script src="js/three.js"></script>
-        <script src="js/menu_cubes.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/handtrackjs/dist/handtrack.min.js"></script>
-        <img id="hand_robot" src="images/hand_robot.png">
+        <video autoplay="false" id="videoElement"  ></video>
+
+        <div class="outer">
+            <canvas id="flex-container"></canvas>
+        </div>
         
+        <img id="hand" src="images/hand.png">
+        
+        <script src="js/hand.js"></script>
         <!-- Temporary: Follow Mouse -->
-        <script src=js/hand_mouse.js></script> -->
-        
-        <!-- Instructs onscreen hand to follow the player's hand using handtrack.js 
-        <script src="https://cdn.jsdelivr.net/npm/handtrackjs/dist/handtrack.min.js"> </script>
-        <script src=js/hand.js></script> -->
+        <!-- <script src=js/hand_mouse.js></script> -->
 
 	</body>
 </html>
