@@ -86,7 +86,6 @@
                 cube.position.z = -10;
 
                 return cube;
-
             }
 
             // REMOVE when implemented handtrack
@@ -102,6 +101,7 @@
             }
 
             // FONTS FOR POINT TOTAL --> should work once multi-page website is made
+            // SOURCE: https://threejs.org/docs/#api/en/geometries/TextGeometry
             /*
             function printPoints(points) {
                 const loader = new THREE.FontLoader();
@@ -126,7 +126,7 @@
             */
 
             // creating the cube geometry
-            var geometry = new THREE.BoxGeometry(1, 1, 1);
+            var geometry = new THREE.BoxGeometry(1, 1.2, 1);
             // array to randomize colours for the cubes
             var colours = [
                 0x8844aa,
@@ -205,34 +205,34 @@
                 // this sets the speed of each cube (because we're translating it by a bit
                 //  in each frame)
                 cubes.forEach((cube, index) => {  // => is just a way to shorten the syntax
-                    /*
-                    const speed = 0.1 + index * 0.05; 
-                    const rot = time * 0.5;
-                    cube.rotation.x = rot;
-                    cube.rotation.y = rot;
-                    cube.rotation.z = rot;
-                    cube.translateY(speed);
-                    */
-
+                    
                     // speed is randomly chosen from the array of possible speeds
                     cube.translateZ(speeds[Math.floor(Math.random()*8)]);
                 });
 
                 // setting up raycaster and finding intersections (where mouse vector intersects with box)
 				raycaster.setFromCamera( mouse, camera );
-                const intersects = raycaster.intersectObjects( scene.children );
+                const intersects = raycaster.intersectObjects(scene.children);
+
+                console.log(intersects);
 
                 if (intersects.length > 0) {
-                    // when mouse is over the box, it is removed from scene
+                    // when mouse is over the box, it lights up and is removed from scene
                     if (intersectedBox != intersects[0].object ) {
                         intersectedBox = intersects[ 0 ].object;
-                        scene.remove(intersectedBox);
+                        // box lights up
+                        intersectedBox.material.emissive.setHex(0xff0000);
+                        intersectedBox.currentHex = intersectedBox.material.emissive.getHex();
+                        intersectedBox.material.color.setHex(0xFFFFFF);
+                        // after 15ms, box is removed from scene
+                        setTimeout(() => { scene.remove(intersectedBox); }, 15);
                         // increase points by 10
                         points += 10;
                         console.log(points);
                     }
 
                 } else {
+                    if ( intersectedBox ) intersectedBox.material.emissive.setHex( intersectedBox.currentHex );
                     // set intersected box to null
                     intersectedBox = null;
                 }
