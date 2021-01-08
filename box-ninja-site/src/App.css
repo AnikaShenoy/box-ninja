@@ -17,6 +17,7 @@ html{
     overflow: hidden;
 
 }
+
 h1 {
     background-color: black;
     padding: 1em;
@@ -54,4 +55,13 @@ body, .outer, #flex-container {
     transform: rotateY(180deg);
     -webkit-transform:rotateY(180deg); /* Safari and Chrome */
     -moz-transform:rotateY(180deg); /* Firefox */
+}
+
+.error {
+    color: red;
+    padding: 1em;
+    font-size: 16px;
+    font-size: 4vw;
+    font-family: "Bungee", Bungee Shade;
+    text-align: center;
 }
