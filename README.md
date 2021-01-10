@@ -11,3 +11,6 @@ React JS, HTML/CSS
 1. Clone the repository
 2. `cd` into box-ninja-site
 3. `npm start`
+
+### Demo (Mouse Control, Menu Page)
+![Alt Text](https://media.giphy.com/media/bPckFnIBQtYEv6RB5K/giphy.gif)
