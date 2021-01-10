@@ -5,18 +5,19 @@ import "../App.css";
 export default class Game extends Component {
    componentDidMount() {
 
-      const script = document.createElement("script");
-      script.type = "module"
-      script.src = "js/Game.js";
-      script.async = true;
-  
-      document.body.appendChild(script);
+    const script = document.createElement("script");
+    script.type = "module";
+    script.src = "js/game.js";
+    script.async = true;
+
+    document.body.appendChild(script);
 
 
-      const hand = document.createElement("hand");
-      hand.src = "js/hand_mouse.js";
-      hand.async = true;
-      document.body.appendChild(hand);
+    const mouse = document.createElement("script");
+    mouse.type = "module";
+    mouse.src = "js/hand_mouse.js";
+    mouse.async = true;
+    document.body.appendChild(mouse);
   }
 
   render() {
