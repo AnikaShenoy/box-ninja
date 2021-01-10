@@ -18,8 +18,8 @@ function getMouseCoords(e) {
   
       run: function(e) {
         var e = e || window.event;
-        hand.style.left  = (e.clientX - 95)+ 'px';
-        hand.style.top = (e.clientY - 90) + 'px';
+        hand.style.left = (e.clientX - (hand.clientWidth/2))+ 'px';
+        hand.style.top = (e.clientY - (hand.clientHeight/2)) + 'px';
         getMouseCoords(e);
       }
     };

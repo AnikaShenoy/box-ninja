@@ -148,14 +148,10 @@ function animate(){
     
     
     if (INTERSECTED == cube_inst){
-        return (
-            console.log("hand")
-        )
+        
     } else {
         if (INTERSECTED == cube_menu){
-            return (
-                console.log("switch to mouse")
-            )
+            
         }
     }
 }
