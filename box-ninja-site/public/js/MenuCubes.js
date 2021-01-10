@@ -1,5 +1,6 @@
 import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/build/three.module.js';
 
+
 const container = document.querySelector("#flex-container");
 
 
@@ -14,7 +15,7 @@ camera.position.z=5;
 
 //Menu Cube
 const geometry_menu = new THREE.BoxGeometry();
-const texture_menu = new THREE.TextureLoader().load("images/play.png")
+const texture_menu = new THREE.TextureLoader().load("images/hand_control.png")
 const material_menu = new THREE.MeshBasicMaterial( { 
     color: 0x00ff00,
     map: texture_menu,
@@ -29,7 +30,7 @@ scene.add(cube_menu);
 
 //Instructions Cube
 const geometry_inst = new THREE.BoxGeometry();
-const texture_inst = new THREE.TextureLoader().load("images/help.png")
+const texture_inst = new THREE.TextureLoader().load("images/mouse_control.png")
 const material_inst = new THREE.MeshBasicMaterial( { 
     color: 0x00ff00,
     map: texture_inst,
