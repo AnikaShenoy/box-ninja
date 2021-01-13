@@ -228,8 +228,8 @@ function main() {
             intersectedBox = null;
         }
         
-        document.getElementById("title").innerHTML = "";
-        //document.getElementById("points").innerHTML = "hello";
+        //document.getElementById("title").innerHTML = "";
+        document.getElementById("points").innerHTML = "Points: " + points;
 
         //printPoints(points);
 
