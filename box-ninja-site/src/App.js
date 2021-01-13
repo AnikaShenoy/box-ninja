@@ -3,12 +3,13 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import "./App.css"
  
 import Home from './components/Home';
-import Game from './components/Game';
+import Game_Gesture from './components/Game_Gesture';
+import Game_Mouse from "./components/Game_Mouse";
 import Error from './components/Error';
 import Navigation from './components/Navigation';
 
  
-class App extends Component {
+export default class App extends Component {
   render() {
     return (      
        <BrowserRouter id="root">
@@ -16,7 +17,8 @@ class App extends Component {
           {/* <Navigation /> */}
             <Switch>
              <Route path="/" component={Home} exact/>
-             <Route path="/game" component={Game}/>
+             <Route path="/game-gesture" component={Game_Gesture}/>
+             <Route path="/game-mouse" component={Game_Mouse}/>
             <Route component={Error}/>
            </Switch>
         </div> 
@@ -24,5 +26,4 @@ class App extends Component {
     );
   }
 }
- 
-export default App;
+

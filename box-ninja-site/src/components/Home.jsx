@@ -19,23 +19,13 @@ export default class Home extends Component {
     
         document.body.appendChild(mouse);
 
-        /* 
-        Note: This comment will connect this file to Video.js.
-        const video = document.createElement("script");
-        video.type = "module"
-        video.src = "js/Video.js";
-        video.async = true;
-    
-        document.body.appendChild(video); */
+        
     }
 
     render() {
         return (
             <div>
                  <h1 id="title">Box Ninja</h1>
-                 <video autoplay="false" id="videoElement"></video>
-     
-                 
      
                  <div className="outer">
                      <canvas id="flex-container"></canvas>
@@ -47,6 +37,7 @@ export default class Home extends Component {
          );
         
     }
+    
 
     
     

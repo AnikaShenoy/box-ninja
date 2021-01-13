@@ -50,7 +50,7 @@ body, .outer, #flex-container {
 #videoElement {
     /* Source for flipping video: http://jsfiddle.net/DuT9U/1/ */
     position: absolute;
-    padding-bottom: 5%;
+    padding: 10%;
     bottom: 0;
     transform: rotateY(180deg);
     -webkit-transform:rotateY(180deg); /* Safari and Chrome */

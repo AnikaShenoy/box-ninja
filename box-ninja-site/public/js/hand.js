@@ -1,17 +1,17 @@
-
+import "https://cdn.jsdelivr.net/npm/handtrackjs/dist/handtrack.min.js";
 
 const myVideo = document.getElementById("videoElement");
 const hand = document.getElementById("hand")
 hand.style.position = "absolute";
 document.body.appendChild(hand);
 let isVideo = false;
-let model = null;
+let model;
 
 const modelParams = {
     flipHorizontal: true,   // flip e.g for video  
     maxNumBoxes: 20,        // maximum number of boxes to detect
     iouThreshold: 0.5,      // ioU threshold for non-max suppression
-    scoreThreshold: 0.5,    // confidence threshold for predictions.
+    scoreThreshold: 0.9,    // confidence threshold for predictions.
 }
 
 function startVideo() {

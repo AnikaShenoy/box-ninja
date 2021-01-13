@@ -77,6 +77,7 @@ function main() {
     // REMOVE when implemented handtrack
     // create mouse vector and track movement
     const mouse = new THREE.Vector2();
+
     function onDocumentMouseMove( event ) {
 
         event.preventDefault();
@@ -198,9 +199,10 @@ function main() {
 
         // setting up raycaster and finding intersections (where mouse vector intersects with box)
         raycaster.setFromCamera( mouse, camera );
-        const intersects = raycaster.intersectObjects(scene.children);
+        const intersects = raycaster.intersectObjects(scene.children, true);
+        // const intersects = raycaster.intersectObjects(cubes, recursiveFlag);
 
-        console.log(intersects);
+        //console.log(intersects);
 
         if (intersects.length > 0) {
             // when mouse is over the box, it lights up and is removed from scene
@@ -214,7 +216,7 @@ function main() {
                 setTimeout(() => { scene.remove(intersectedBox); }, 15);
                 // increase points by 10
                 points += 10;
-                console.log(points);
+                //console.log(points);
             }
 
         } else {
@@ -223,6 +225,8 @@ function main() {
             intersectedBox = null;
         }
         
+        document.getElementById("title").innerHTML = "High Score: " + points;
+
         //printPoints(points);
 
         // this actually draws the scene
@@ -232,9 +236,12 @@ function main() {
     }
     requestAnimationFrame(render);
 }
+
+
 main();
+
     
-          
+
           
           
           
