@@ -18,14 +18,13 @@ export default class Home extends Component {
         mouse.async = true;
     
         document.body.appendChild(mouse);
-
-        
     }
 
     render() {
         return (
             <div>
                  <h1 id="title">Box Ninja</h1>
+                 <h3 id="points">P</h3>
      
                  <div className="outer">
                      <canvas id="flex-container"></canvas>
@@ -36,9 +35,5 @@ export default class Home extends Component {
 
          );
         
-    }
-    
-
-    
-    
+    }    
 }

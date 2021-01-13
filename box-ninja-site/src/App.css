@@ -18,7 +18,7 @@ html{
 
 }
 
-h1 {
+#title {
     background-color: black;
     padding: 1em;
     font-size: 16px;
@@ -26,6 +26,16 @@ h1 {
     color: rgba(255,255,255,.75);
     font-family: "Bungee", Bungee Shade;
     text-align: center;
+}
+
+#points {
+    background-color: black;
+    padding: 0.5em;
+    font-size: 2px;
+    font-size: 4vw;
+    color: rgba(255,255,255,.75);
+    font-family: "Bungee", Bungee Shade;
+    text-align: left;
 }
 
 

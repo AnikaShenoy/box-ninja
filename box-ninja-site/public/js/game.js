@@ -210,13 +210,13 @@ function main() {
         if (intersects.length > 0) {
             // when mouse is over the box, it lights up and is removed from scene
             if (intersectedBox != intersects[0].object ) {
-                intersectedBox = intersects[ 0 ].object;
+                intersectedBox = intersects[0].object;
                 // box lights up
                 intersectedBox.material.emissive.setHex(0xff0000);
                 intersectedBox.currentHex = intersectedBox.material.emissive.getHex();
                 intersectedBox.material.color.setHex(0xFFFFFF);
                 // after 15ms, box is removed from scene
-                setTimeout(() => { scene.remove(intersectedBox); }, 15);
+                setTimeout(() => { scene.remove(intersectedBox); }, 12);
                 // increase points by 10
                 points += 10;
                 //console.log(points);
@@ -228,7 +228,8 @@ function main() {
             intersectedBox = null;
         }
         
-        //document.getElementById("title").innerHTML = "High Score: " + points;
+        document.getElementById("title").innerHTML = "";
+        //document.getElementById("points").innerHTML = "hello";
 
         //printPoints(points);
 
@@ -239,6 +240,5 @@ function main() {
     }
     requestAnimationFrame(render);
 }
-
 
 main();
