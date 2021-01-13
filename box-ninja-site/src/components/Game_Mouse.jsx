@@ -23,7 +23,8 @@ export default class Game_Mouse extends Component {
   render() {
       return (
           <div>
-               <h3 id="points">Points:</h3>
+               <h3 id="points"></h3>
+
                <img id="hand" src="images/hand.png" alt=""/>
    
                <div className="outer">

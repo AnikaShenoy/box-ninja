@@ -87,34 +87,6 @@ function main() {
 
     }
 
-    // FONTS FOR POINT TOTAL --> should work once multi-page website is made
-    // SOURCE: https://threejs.org/docs/#api/en/geometries/TextGeometry
-    
-    //TODO typeface.js support is deprecated error
-    /*
-    function printPoints(points) {
-        var loader = new THREE.FontLoader();
-
-        let text = "Points: " + points;
-
-        loader.load( 'fonts/helvetiker_regular.typeface.json', function ( font ) {
-
-            const geometry = new THREE.TextGeometry(text, {
-                font: font,
-                size: 10,
-                height: 5,
-                curveSegments: 12,
-                bevelEnabled: true,
-                bevelThickness: 10,
-                bevelSize: 8,
-                bevelOffset: 0,
-                bevelSegments: 5
-            } );
-        } );
-    }
-    */
-
-
     // creating the cube geometry
     var geometry = new THREE.BoxGeometry(1, 1.2, 1);
     // array to randomize colours for the cubes
@@ -219,6 +191,7 @@ function main() {
                 setTimeout(() => { scene.remove(intersectedBox); }, 12);
                 // increase points by 10
                 points += 10;
+                document.getElementById("points").innerHTML = "Points: " + points;
                 //console.log(points);
             }
 
@@ -227,11 +200,6 @@ function main() {
             // set intersected box to null
             intersectedBox = null;
         }
-        
-        //document.getElementById("title").innerHTML = "";
-        document.getElementById("points").innerHTML = "Points: " + points;
-
-        //printPoints(points);
 
         // this actually draws the scene
         renderer.render(scene, camera);
