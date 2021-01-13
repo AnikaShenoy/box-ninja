@@ -46,7 +46,9 @@ export default class Game_Gesture extends Component {
       return (
           <div>
                <h3 id="points">Points:</h3>
-               
+
+               <h5 id="gesture"></h5>
+
                <video autoplay="false" id="videoElement"></video>
    
                <img id="hand" src="images/hand.png" alt=""/>

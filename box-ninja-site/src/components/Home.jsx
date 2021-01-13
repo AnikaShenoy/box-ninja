@@ -24,7 +24,7 @@ export default class Home extends Component {
         return (
             <div>
                  <h1 id="title">Box Ninja</h1>
-                 <h3 id="points">P</h3>
+                 <h3 id="points"></h3>
      
                  <div className="outer">
                      <canvas id="flex-container"></canvas>

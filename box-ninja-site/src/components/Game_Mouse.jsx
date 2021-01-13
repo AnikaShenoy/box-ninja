@@ -25,6 +25,8 @@ export default class Game_Mouse extends Component {
           <div>
                <h3 id="points"></h3>
 
+               <h5 id="mouse"></h5>
+
                <img id="hand" src="images/hand.png" alt=""/>
    
                <div className="outer">

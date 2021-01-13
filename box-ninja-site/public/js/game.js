@@ -103,6 +103,33 @@ function main() {
         0xfe17a2,
         0x40e0d0
     ];
+
+    // create array to randomize speeds for the cubes
+    if (document.getElementById("gesture") != null) {
+        // slower speed if using gesture control
+        var speeds = [
+            0.1,
+            0.15,
+            0.2,
+            0.12,
+            0.12,
+            0.05,
+            0.09,
+            0.13
+        ];
+    } else if (document.getElementById("mouse") != null) {
+        // faster speeds if using mouse control
+        var speeds = [
+            0.13,
+            0.15,
+            0.2,
+            0.12,
+            0.18,
+            0.19,
+            0.15,
+            0.13
+        ];
+    }
     // array to randomize speeds for the cubes 
     var speeds = [
         0.1,
@@ -200,6 +227,7 @@ function main() {
             // set intersected box to null
             intersectedBox = null;
         }
+        
 
         // this actually draws the scene
         renderer.render(scene, camera);
