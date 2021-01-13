@@ -1,5 +1,4 @@
 // Mouse Control Source: https://stackoverflow.com/questions/7143806/make-an-image-follow-mouse-pointer 
-// (this will be unnecessary in final product)
 
 function getMouseCoords(e) {
     var e = e || window.event;
@@ -18,8 +17,8 @@ function getMouseCoords(e) {
   
       run: function(e) {
         var e = e || window.event;
-        hand.style.left  = (e.clientX - 30)+ 'px';
-        hand.style.top = (e.clientY - 20) + 'px';
+        hand.style.left = (e.clientX - (hand.clientWidth/2))+ 'px';
+        hand.style.top = (e.clientY - (hand.clientHeight/2)) + 'px';
         getMouseCoords(e);
       }
     };
