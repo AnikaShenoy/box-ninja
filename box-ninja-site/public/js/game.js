@@ -8,9 +8,6 @@ import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threej
 // https://tympanus.net/codrops/2016/04/26/the-aviator-animating-basic-3d-scene-threejs/
 
 
-
-
-
 function main() {
     const canvas = document.querySelector('#flex-container');
     const renderer = new THREE.WebGLRenderer({canvas, antialias: true});
@@ -26,10 +23,7 @@ function main() {
 
     // points keeper
     var points = 0;
-
-    // REMOVE when implementing handtrack
     
-
     // need 3 things to display with three.js --> scene, camera, renderer
     // create a new scene
     var scene = new THREE.Scene();
@@ -52,7 +46,6 @@ function main() {
     var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 500);
     // moving camera out in z-plane
     camera.position.z = 5;
-
 
     // function that makes a new material with  specified geometry, color, 
     //  and x- and y-coordinates
