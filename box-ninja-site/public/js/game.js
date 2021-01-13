@@ -28,7 +28,7 @@ function main() {
     var points = 0;
 
     // REMOVE when implementing handtrack
-    document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+    
 
     // need 3 things to display with three.js --> scene, camera, renderer
     // create a new scene
@@ -75,6 +75,9 @@ function main() {
     }
 
     // REMOVE when implemented handtrack
+    // set up mouse
+    document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+
     // create mouse vector and track movement
     const mouse = new THREE.Vector2();
 
@@ -86,6 +89,7 @@ function main() {
         mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
 
     }
+    
 
     // creating the cube geometry
     var geometry = new THREE.BoxGeometry(1, 1.2, 1);
@@ -182,13 +186,15 @@ function main() {
         }
         */
         
+        // generate random number for selecting speed from array randomly later on
+       var random = Math.floor(Math.random()*8);
 
         // this sets the speed of each cube (because we're translating it by a bit
         //  in each frame)
         cubes.forEach((cube, index) => {  // => is just a way to shorten the syntax
             
             // speed is randomly chosen from the array of possible speeds
-            cube.translateZ(speeds[Math.floor(Math.random()*8)]);
+            cube.translateZ(speeds[random]);
         });
 
         // setting up raycaster and finding intersections (where mouse vector intersects with box)
@@ -211,6 +217,8 @@ function main() {
                 // increase points by 10
                 points += 10;
                 document.getElementById("points").innerHTML = "Points: " + points;
+                // make boxes faster over time to increase difficulty
+                speeds[random] = speeds[random] + 0.011;
             }
 
         } else {
@@ -218,7 +226,6 @@ function main() {
             // set intersected box to null
             intersectedBox = null;
         }
-        
 
         // this actually draws the scene
         renderer.render(scene, camera);
