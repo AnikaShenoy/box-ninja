@@ -6,7 +6,7 @@ import Home from './components/Home';
 import Game_Gesture from './components/Game_Gesture';
 import Game_Mouse from "./components/Game_Mouse";
 import Error from './components/Error';
-import Navigation from './components/Navigation';
+//import Navigation from './components/Navigation';
 
  
 export default class App extends Component {
