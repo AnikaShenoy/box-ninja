@@ -104,8 +104,9 @@ function main() {
         0x40e0d0
     ];
 
-    // create array to randomize speeds for the cubes
+    // different set-ups based on whether gesture or mouse controlled
     if (document.getElementById("gesture") != null) {
+        // create array to randomize speeds for the cubes
         // slower speed if using gesture control
         var speeds = [
             0.1,
@@ -118,6 +119,7 @@ function main() {
             0.13
         ];
     } else if (document.getElementById("mouse") != null) {
+        // create array to randomize speeds for the cubes
         // faster speeds if using mouse control
         var speeds = [
             0.13,
@@ -209,7 +211,6 @@ function main() {
                 // increase points by 10
                 points += 10;
                 document.getElementById("points").innerHTML = "Points: " + points;
-                //console.log(points);
             }
 
         } else {
