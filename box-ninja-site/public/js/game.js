@@ -130,17 +130,7 @@ function main() {
             0.13
         ];
     }
-    // array to randomize speeds for the cubes 
-    var speeds = [
-        0.1,
-        0.15,
-        0.2,
-        0.12,
-        0.18,
-        0.19,
-        0.15,
-        0.13
-    ];
+
     // array to append cubes as needed
     var cubes = [
         makeShape(geometry, colours[Math.floor(Math.random()*11)], [0,0]),
