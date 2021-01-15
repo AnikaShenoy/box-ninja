@@ -5,7 +5,9 @@ function getMouseCoords(e) {
     document.getElementById('hand').innerHTML = e.clientX + ', ' + e.clientY + '<br>' + e.screenX + ', ' + e.screenY;
   }
   
-  
+  // WE CAN'T USE IF WE'RE USING LINKS TO CLICK
+
+  /*
   var followCursor = (function() {
     var hand = document.getElementById('hand');
     hand.style.position = "absolute";
@@ -28,4 +30,4 @@ function getMouseCoords(e) {
     followCursor.init();
     document.body.onmousemove = followCursor.run;
   }
-  
+  */

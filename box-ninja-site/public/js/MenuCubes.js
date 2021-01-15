@@ -1,4 +1,5 @@
 import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/build/three.module.js';
+//import {useHistory} from 'react-router-dom';
 
 const container = document.querySelector("#flex-container");
 
@@ -37,9 +38,6 @@ function onWindowResize(){
 }
 
 
-
-
-
 //Menu Cube Properties
 const geometry_menu = new THREE.BoxGeometry();
 const texture_menu = new THREE.TextureLoader().load("images/hand_control.png")
@@ -68,6 +66,19 @@ scene.add(cube_inst);
 cube_inst.scale.x = Math.min(window.innerWidth/500, 2);
 cube_inst.scale.y = Math.min(window.innerWidth/500, 2);
 cube_inst.scale.z = Math.min(window.innerWidth/500, 2);
+
+/*
+var a = document.createElement('a');  
+a.appendChild(cube_inst);
+a.href = "https://www.geeksforgeeks.org";  
+document.body.appendChild(a); 
+
+var b = document.createElement('a');
+b.appendChild(cube_menu);
+b.href = "https://www.geeksforgeeks.org";  
+document.body.appendChild(b); 
+*/
+
 
 let bounceControl_m = true;
 let up_m = true;
@@ -131,29 +142,71 @@ function animate(){
         }
     }
 
+    /*
     // update the picking ray with the camera and mouse position
 	raycaster.setFromCamera( mouse, camera );
 
+    
 	// calculate objects intersecting the picking ray
     const intersects = raycaster.intersectObjects( scene.children);
 
     if (intersects.length > 0) {
-        if (INTERSECTED != intersects[ 0 ].object ){
+        if (INTERSECTED != intersects[0].object ){
             INTERSECTED = intersects[0].object;
         }
     } 
+    */
 
     
     renderer.render(scene, camera)
     
+    //let history = useHistory();
+    /*
+    document.addEventListener('mousedown', onDocumentMouseDown, false);
     
+    function onDocumentMouseDown(event) {
+        console.log("hi");
+        event.preventDefault();
+        
+        mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+        mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+        raycaster.setFromCamera(mouse, camera);
+        var intersects = raycaster.intersectObjects(scene.children);
+        if (intersects[0].object == cube_inst) {
+            console.log("hello");
+            //get a link from the userData object
+            //intersects[0].userData = { URL: "/game-mouse"};
+            //window.open(intersects[0].object.userData.URL);
+
+            this.props.history.push('/game-mouse')
+            intersects.length = 0;
+        } else if (intersects[0].object == cube_menu) {
+            console.log("hello");
+            //get a link from the userData object
+            //intersects[0].userData = { URL: "/game-gesture"};
+            //window.open(intersects[0].object.userData.URL);
+            this.props.history.push('/game-gesture')
+            intersects.length = 0;
+        } else if (intersects.length > 0) {
+            console.log("hehe");
+            console.log(intersects[0].object);
+            console.log(cube_menu);
+        }
+    };
+    */
+    
+    /*
     if (INTERSECTED == cube_inst){
+        INTERSECTED.userData = { URL: "http://stackoverflow.com"};
+        window.open(INTERSECTED.object.userData.URL);
         
     } else {
         if (INTERSECTED == cube_menu){
-            
+            INTERSECTED.userData = { URL: "http://stackoverflow.com"};
+            window.open(INTERSECTED.object.userData.URL);
         }
     }
+    */
 }
 
 animate();

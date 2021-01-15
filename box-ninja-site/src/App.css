@@ -38,6 +38,28 @@ html{
     text-align: left;
 }
 
+#mouseLink {
+    background-color: black;
+    padding: 0.5em;
+    font-size: 2px;
+    font-size: 2vw;
+    color: rgba(255, 255, 255, 0.75);
+    opacity: 1;
+    font-family: "Bungee", Bungee Shade;
+    text-align: left;
+}
+
+#gestureLink {
+    background-color: black;
+    padding: 0.5em;
+    font-size: 2px;
+    font-size: 2vw;
+    color: rgba(255,255,255,.75);
+    opacity: 1;
+    font-family: "Bungee", Bungee Shade;
+    text-align: right;
+}
+
 
 body, .outer {
     position: relative;
