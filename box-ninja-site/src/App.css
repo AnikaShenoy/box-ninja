@@ -41,6 +41,8 @@ script #boxes {
     color: rgba(255,255,255,.75);
     font-family: "Bungee", Bungee Shade;
     text-align: center;
+    position: relative;
+    right: 50px;
 }
 
 #points {
@@ -74,7 +76,7 @@ script #boxes {
 #links {
     position:relative;
     top: 400px;
-    left: 400px;
+    left: 220px;
     font-size: 1.8px;
     font-size: 1.8vw;
 }
