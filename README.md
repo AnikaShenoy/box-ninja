@@ -1,6 +1,8 @@
 Box Ninja
 ===========
 
+### NOTE: work in progress
+
 ### Introduction
 Box Ninja is a 3D web game inspired by the popular game, Fruit Ninja. Boxes fly at the player endlessly and the player must hit oncoming boxes to earn points. The game can be controlled using mouse control or gesture control. 
 
