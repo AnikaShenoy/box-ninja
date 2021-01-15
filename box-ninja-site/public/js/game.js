@@ -67,6 +67,7 @@ function main() {
         return cube;
     }
 
+    
     // REMOVE when implemented handtrack
     // set up mouse
     document.addEventListener( 'mousemove', onDocumentMouseMove, false );
@@ -82,6 +83,7 @@ function main() {
         mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
 
     }
+    
     
 
     // creating the cube geometry

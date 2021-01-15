@@ -33,7 +33,6 @@ export default class Game_Gesture extends Component {
     document.body.appendChild(handtrack);
 
     
-      
     const video = document.createElement("script");
     video.type = "module"
     video.src = "js/Video.js";
@@ -59,7 +58,6 @@ export default class Game_Gesture extends Component {
    
           </div>
        );
-
   }
 }
 
