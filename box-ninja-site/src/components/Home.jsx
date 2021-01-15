@@ -20,7 +20,7 @@ export default class Home extends Component {
         mouse.src = "js/hand_mouse.js";
         mouse.async = true;
     
-        document.body.appendChild(mouse);
+        //document.body.appendChild(mouse);
         
     }
 

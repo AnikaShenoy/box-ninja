@@ -32,7 +32,7 @@ export default class Game_Mouse extends Component {
                <div className="outer">
                    <canvas id="flex-container"></canvas>
                </div>
-   
+               <img id="hand" src="images/hand.png" alt=""/> 
           </div>
        );
 
