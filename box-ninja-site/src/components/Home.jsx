@@ -27,7 +27,7 @@ export default class Home extends Component {
     render() {
         return (
             
-            <div id="hi">
+            <div>
                 <h1 id="title">Box Ninja</h1>
                 <h3 id="points"></h3>
 

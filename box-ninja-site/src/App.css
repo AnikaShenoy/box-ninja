@@ -58,6 +58,7 @@ script #boxes {
 }
 
 /* WEIRD --> the links aren't clickable unless they are to the left of cubes... WHY? */
+/* like for example, if I dont have the top, left attributes set, then the links work */
 #mouseLink {
     padding: 0.5em;
     position: relative;
@@ -67,6 +68,7 @@ script #boxes {
     opacity: 1;
     font-family: "Bungee", Bungee Shade;
 }
+
 
 #gestureLink {
     padding: 0em;
@@ -102,12 +104,9 @@ body, .outer, #flex-container {
     padding-bottom: 100;
 }
 
-
-
 #hand {
     width: 10%;
 }
-
 
 #videoElement {
     
@@ -135,6 +134,7 @@ body, .outer, #flex-container {
 
 
 /* BELOW IS THE OLD CSS CODE*/
+
 /*
 
 *{
