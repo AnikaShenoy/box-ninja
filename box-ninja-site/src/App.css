@@ -57,10 +57,11 @@ script #boxes {
     text-align: left;
 }
 
+/* WEIRD --> the links aren't clickable unless they are to the left of cubes... WHY? */
 #mouseLink {
     padding: 0.5em;
     position: relative;
-    left: 140px;
+    left: 350px;
     top: 400px;
     color: rgba(255, 255, 255, 0.75);
     opacity: 1;
@@ -70,7 +71,7 @@ script #boxes {
 #gestureLink {
     padding: 0em;
     position: relative;
-    left: 300px;
+    left: 550px;
     top: 400px;
     color: rgba(255,255,255,.75);
     opacity: 1;
@@ -86,7 +87,6 @@ script #boxes {
     font-size: 1.8vw;
 }
 */
-
 
 
 body, .outer {
