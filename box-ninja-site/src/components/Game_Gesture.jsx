@@ -34,11 +34,11 @@ export default class Game_Gesture extends Component {
 
     
       
-      const video = document.createElement("script");
-      video.type = "module"
-      video.src = "js/Video.js";
-      video.async = true;
-      document.body.appendChild(video);
+    const video = document.createElement("script");
+    video.type = "module"
+    video.src = "js/Video.js";
+    video.async = true;
+    document.body.appendChild(video);
 
   }
 

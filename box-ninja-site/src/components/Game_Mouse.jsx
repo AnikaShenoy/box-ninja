@@ -27,7 +27,7 @@ export default class Game_Mouse extends Component {
 
                <h5 id="mouse"></h5>
 
-               <img id="hand" src="images/hand.png" alt=""/>
+               
    
                <div className="outer">
                    <canvas id="flex-container"></canvas>
@@ -38,4 +38,6 @@ export default class Game_Mouse extends Component {
 
   }
 }
+
+// <img id="hand" src="images/hand.png" alt=""/>  --> would go back underneath the h5 tag
 
