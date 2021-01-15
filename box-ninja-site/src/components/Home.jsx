@@ -33,14 +33,11 @@ export default class Home extends Component {
                 <h1 id="title">Box Ninja</h1>
                 <h3 id="points"></h3>
 
-                <div id="links">
                     <Link id="mouseLink" to='/game-mouse'> Play with Mouse Control </Link>
                     <Link id="gestureLink" to='/game-gesture'> Play with Gesture Control </Link>
-                </div>
-    
-                <div className="outer">
+                    
                     <canvas id="flex-container"></canvas>
-                </div>
+                
             </div>
 
          );
@@ -48,3 +45,4 @@ export default class Home extends Component {
 }
 
 //<img id="hand" src="images/hand.png" alt=""/>     (goes between last two <div> tags)
+//<div className="outer">

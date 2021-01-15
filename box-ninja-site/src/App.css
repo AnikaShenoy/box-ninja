@@ -11,10 +11,12 @@ input, select {
     vertical-align: mmiddle;
 }
 
+
 body {
     background-color: black;
     min-height: 100%;
 }
+
 
 html{
     min-height: 100%;
@@ -22,13 +24,14 @@ html{
 
 }
 
-
+/*
 script #boxes {
     box-align: left;
     vertical-align:bottom;
     position: relative;
     top: 1000px;
 }
+*/
 
 
 /* doesn't seem to be centered??*/
@@ -36,8 +39,8 @@ script #boxes {
     padding: 1em;
     padding-bottom: 10px;
     background-color: black;
-    font-size: 16px;
-    font-size: 4vw;
+    font-size: 20px;
+    font-size: 6vw;
     color: rgba(255,255,255,.75);
     font-family: "Bungee", Bungee Shade;
     text-align: center;
@@ -57,7 +60,8 @@ script #boxes {
 #mouseLink {
     padding: 0.5em;
     position: relative;
-    right: 80 px;
+    left: 140px;
+    top: 400px;
     color: rgba(255, 255, 255, 0.75);
     opacity: 1;
     font-family: "Bungee", Bungee Shade;
@@ -66,13 +70,14 @@ script #boxes {
 #gestureLink {
     padding: 0em;
     position: relative;
-    left: 80px;
-
+    left: 300px;
+    top: 400px;
     color: rgba(255,255,255,.75);
     opacity: 1;
     font-family: "Bungee", Bungee Shade;
 }
 
+/*
 #links {
     position:relative;
     top: 400px;
@@ -80,20 +85,24 @@ script #boxes {
     font-size: 1.8px;
     font-size: 1.8vw;
 }
+*/
+
 
 
 body, .outer {
     position: relative;
     width: 100%;
     padding-bottom: 100;
-}
+} 
+
 
 body, .outer, #flex-container {
     position: absolute;
     width:100%;
     padding-bottom: 100;
-    
 }
+
+
 
 #hand {
     width: 10%;
