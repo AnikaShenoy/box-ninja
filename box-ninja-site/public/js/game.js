@@ -7,7 +7,6 @@ import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threej
 // https://medium.com/@davisonpro/javascript-game-development-83a579580d48
 // https://tympanus.net/codrops/2016/04/26/the-aviator-animating-basic-3d-scene-threejs/
 
-
 function main() {
     const canvas = document.querySelector('#flex-container');
     const renderer = new THREE.WebGLRenderer({canvas, antialias: true});
@@ -66,24 +65,6 @@ function main() {
 
         return cube;
     }
-
-    
-    // REMOVE when implemented handtrack
-    // set up mouse
-    document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-
-    // create mouse vector and track movement
-    const mouse = new THREE.Vector2();
-
-    function onDocumentMouseMove( event ) {
-
-        event.preventDefault();
-
-        mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
-        mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
-
-    }
-    
     
 
     // creating the cube geometry
@@ -102,6 +83,25 @@ function main() {
         0xfe17a2,
         0x40e0d0
     ];
+
+
+    
+    // REMOVE when implemented handtrack
+    // set up mouse
+    document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+
+    // create mouse vector and track movement
+    const mouse = new THREE.Vector2();
+
+    function onDocumentMouseMove( event ) {
+
+        event.preventDefault();
+
+        mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+        mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+    }
+
+    //const hand = document.getElementById("hand")
 
     // different set-ups based on whether gesture or mouse controlled
     if (document.getElementById("gesture") != null) {
