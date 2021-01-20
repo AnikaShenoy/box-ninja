@@ -21,7 +21,7 @@ React JS, HTML/CSS
 ![Alt Text](https://media.giphy.com/media/bPckFnIBQtYEv6RB5K/giphy.gif)
 
 ### Demo (Gesture Control, Game Page)
-![Alt Text](https://media.giphy.com/media/O6PNt0NgKNTX6s4dA5/giphy.gif)
+![Alt Text](https://media.giphy.com/media/YAQerHWtkksqV2CThJ/giphy.gif)
 
 ### References
 @article{Dibia2017,
