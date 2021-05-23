@@ -62,8 +62,8 @@ script #boxes {
 #mouseLink {
     padding: 0.5em;
     position: relative;
-    left: 350px;
-    top: 400px;
+    left: 400px;
+    top: 20px;
     color: rgba(255, 255, 255, 0.75);
     opacity: 1;
     font-family: "Bungee", Bungee Shade;
@@ -73,8 +73,8 @@ script #boxes {
 #gestureLink {
     padding: 0em;
     position: relative;
-    left: 550px;
-    top: 400px;
+    left: 800px;
+    top: 5px;
     color: rgba(255,255,255,.75);
     opacity: 1;
     font-family: "Bungee", Bungee Shade;
