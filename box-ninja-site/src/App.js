@@ -5,6 +5,7 @@ import "./App.css"
 import Home from './components/Home';
 import Game_Gesture from './components/Game_Gesture';
 import Game_Mouse from "./components/Game_Mouse";
+import Instructions from "./components/Instructions";
 import Error from './components/Error';
 //import Navigation from './components/Navigation';
 
@@ -19,7 +20,8 @@ export default class App extends Component {
              <Route path="/" component={Home} exact/>
              <Route path="/game-gesture" component={Game_Gesture}/>
              <Route path="/game-mouse" component={Game_Mouse}/>
-            <Route component={Error}/>
+             <Route path="/instructions" component={Instructions}/>
+             <Route component={Error}/>
            </Switch>
         </div> 
       </BrowserRouter>

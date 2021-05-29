@@ -1,4 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Bungee);
+@import url(https://fonts.googleapis.com/css?family=Arvo);
+@import url(https://fonts.googleapis.com/css?family=Dosis);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 *{
     padding: 0;
@@ -33,19 +36,16 @@ script #boxes {
 }
 */
 
-
-/* doesn't seem to be centered??*/
 #title {
-    padding: 1em;
+    /*padding: 1em;*/
+    padding-top: 40px;
     padding-bottom: 10px;
-    background-color: black;
-    font-size: 20px;
+    /*background-color: black;*/
     font-size: 6vw;
     color: rgba(255,255,255,.75);
     font-family: "Bungee", Bungee Shade;
     text-align: center;
     position: relative;
-    right: 50px;
 }
 
 #points {
@@ -57,14 +57,64 @@ script #boxes {
     text-align: left;
 }
 
-/* WEIRD --> the links aren't clickable unless they are to the left of cubes... WHY? */
-/* like for example, if I dont have the top, left attributes set, then the links work */
-#mouseLink {
-    padding: 0.5em;
+#instructionsTitle {
+    padding-top: 1em;
+    padding-bottom: 10px;
+    background-color: black;
+    font-size: 3.5vw;
+    color: rgba(255,255,255,.75);
+    font-family: "Bungee", Bungee Shade;
+    text-align: center;
+}
+
+#instructionsMiniHeader{
+    font-size: 22px;
+    color: rgba(255,255,255,.75);
+    text-align: center;
+    font-weight: 1000;
+    font-family: 'Montserrat';
+}
+
+.instructions {
+    color: rgba(255,255,255,.75);
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Dosis';
+    
+}
+
+
+#homeLink {
     position: relative;
-    left: 400px;
+    left: 40px;
     top: 20px;
     color: rgba(255, 255, 255, 0.75);
+    opacity: 1;
+    font-family: "Bungee", Bungee Shade;
+}
+
+#instructionsLink {
+    display: inline-block;
+    text-align: center;
+    left: 40px;
+    top: 20px;
+    font-size: 22px;
+    /*color: rgba(255, 255, 255, 0.75);*/
+    color: #00ff00;
+    opacity: 1;
+    font-family: "Bungee", Bungee Shade;
+}
+
+#mouseLink {
+    padding: 0em;
+    /*color: rgba(255, 255, 255, 0.75);*/
+    color: #00ff00;
+    font-size: 22px;
+    /*margin-left: 100px;*/
+    display: block;
+    text-align: center;
+    left: 400px;
+    top: 20px;
     opacity: 1;
     font-family: "Bungee", Bungee Shade;
 }
@@ -72,10 +122,15 @@ script #boxes {
 
 #gestureLink {
     padding: 0em;
-    position: relative;
+    /*position: relative;*/
+    display: block;
+    margin-right: 100px;
+    text-align: center;
     left: 800px;
     top: 5px;
-    color: rgba(255,255,255,.75);
+    color: #00ff00;
+    font-size: 22px;
+    /*color: rgba(255,255,255,.75);*/
     opacity: 1;
     font-family: "Bungee", Bungee Shade;
 }

@@ -47,31 +47,28 @@ export default class Home extends Component {
 
     render() {
         return (
-            
             <div>
+                <ul>
+                    
+                </ul>
+
                 <h1 id="title">Box Ninja</h1>
                 <h3 id="points"></h3>
 
-                {/* <Link id="mouseLink" to='/game-mouse'> Mouse Control </Link>
-                <Link id="gestureLink" to='/game-gesture'> Hand Control </Link> */}
-
-                {/* <Link id="mouseLink" to='/game-mouse'> Mouse Control </Link>
-                <button id="gestureLink" to='/game-gesture'> Hand Control </button> */}
-
-                {/* <ul>
-                    <li><Link to='/game-mouse' style={mouseLinkStyle}> Mouse Control </Link></li>
-                    <li><Link to='/game-gesture' style={gestureLinkStyle}> Hand Control </Link></li>
-                </ul> */}
-
                 <ul>
-                    <li><Link id="mouseLink" to='/game-mouse'> Mouse Control </Link></li>
-                    <li><Link id="gestureLink" to='/game-gesture'> Hand Control </Link></li>
+                        <br></br>
+                        <br></br>
+                    <li><Link id="gestureLink" to='/game-gesture'> Play (Gesture Control) </Link></li>
+                        <br></br>
+                    <li><Link id="mouseLink" to='/game-mouse'> Play (Mouse Control) </Link></li>
+                        <br></br>
+                    <li><Link id="instructionsLink" to='/instructions'> Instructions </Link></li>
                 </ul>
-
+    
                 <canvas id="flex-container"></canvas>
-
+    
             </div>
-         );
+        );
     }    
 }
 
