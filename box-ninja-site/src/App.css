@@ -13,7 +13,6 @@ input, select {
     vertical-align: mmiddle;
 }
 
-
 body {
     background-color: black;
     min-height: 100%;
@@ -82,12 +81,44 @@ script #boxes {
     
 }
 
-
+/* on instructions page */
 #homeLink {
     position: relative;
     left: 40px;
     top: 20px;
     color: rgba(255, 255, 255, 0.75);
+    opacity: 1;
+    font-family: "Bungee", Bungee Shade;
+    text-decoration: none;
+}
+
+/* links on home page */
+#mouseLink {
+    padding: 0em;
+    /*color: rgba(255, 255, 255, 0.75);*/
+    color: #00ff00;
+    font-size: 22px;
+    /*margin-left: 100px;*/
+    display: block;
+    text-align: center;
+    left: 400px;
+    top: 20px;
+    opacity: 1;
+    font-family: "Bungee", Bungee Shade;
+    text-decoration: none;
+}
+
+#gestureLink {
+    padding: 0em;
+    /*position: relative;*/
+    display: block;
+    margin-right: 100px;
+    text-align: center;
+    left: 800px;
+    top: 5px;
+    color: #00ff00;
+    font-size: 22px;
+    /*color: rgba(255,255,255,.75);*/
     opacity: 1;
     font-family: "Bungee", Bungee Shade;
     text-decoration: none;
@@ -106,44 +137,11 @@ script #boxes {
     text-decoration: none;
 }
 
-#mouseLink {
-    padding: 0em;
-    /*color: rgba(255, 255, 255, 0.75);*/
-    color: #00ff00;
-    font-size: 22px;
-    /*margin-left: 100px;*/
-    display: block;
-    text-align: center;
-    left: 400px;
-    top: 20px;
-    opacity: 1;
-    font-family: "Bungee", Bungee Shade;
-    text-decoration: none;
-}
-
-
-#gestureLink {
-    padding: 0em;
-    /*position: relative;*/
-    display: block;
-    margin-right: 100px;
-    text-align: center;
-    left: 800px;
-    top: 5px;
-    color: #00ff00;
-    font-size: 22px;
-    /*color: rgba(255,255,255,.75);*/
-    opacity: 1;
-    font-family: "Bungee", Bungee Shade;
-    text-decoration: none;
-}
-
 body, .outer {
     position: relative;
     width: 100%;
     padding-bottom: 100;
 } 
-
 
 body, .outer, #flex-container {
     position: absolute;
@@ -156,7 +154,6 @@ body, .outer, #flex-container {
 }
 
 #videoElement {
-    
     position: absolute;
     z-index: 1;
     padding-top: 5%;
@@ -176,89 +173,4 @@ body, .outer, #flex-container {
     text-align: center;
 }
 
-
 /* Source for flipping video: http://jsfiddle.net/DuT9U/1/ */ /* Safari and Chrome */ /* Firefox */
-
-
-/* BELOW IS THE OLD CSS CODE*/
-
-/*
-
-*{
-    padding: 0;
-    margin: 0;
-    border: 0;
-}
-input, select {
-    vertical-align: mmiddle;
-}
-body {
-    background-color: black;
-}
-
-html{
-    min-height: 100%;
-    overflow: hidden;
-
-}
-
-#title {
-    background-color: black;
-    padding: 1em;
-    font-size: 16px;
-    font-size: 4vw;
-    color: rgba(255,255,255,.75);
-    font-family: "Bungee", Bungee Shade;
-    text-align: center;
-}
-
-#points {
-    background-color: black;
-    padding: 0.5em;
-    font-size: 2px;
-    font-size: 2vw;
-    color: rgba(255,255,255,.75);
-    font-family: "Bungee", Bungee Shade;
-    text-align: left;
-}
-
-
-body, .outer {
-    position: relative;
-    width: 100%;
-    padding-bottom: 100;
-}
-
-body, .outer, #flex-container {
-    position: absolute;
-    width:100%;
-    padding-bottom: 100;
-    
-}
-
-#hand {
-    width: 10%;
-}
-
-
-#videoElement {
-    position: absolute;
-    z-index: 1;
-    padding-top: 5%;
-    top: 0;
-    right: 0;
-    transform: rotateY(180deg);
-    -webkit-transform:rotateY(180deg); 
-    -moz-transform:rotateY(180deg);
-}
-
-.error {
-    color: red;
-    padding: 1em;
-    font-size: 16px;
-    font-size: 4vw;
-    font-family: "Bungee", Bungee Shade;
-    text-align: center;
-}
-
-*/

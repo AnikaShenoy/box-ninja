@@ -9,6 +9,7 @@ export default class Instructions extends Component {
                <ul>
                     <li><Link id="homeLink" to='/'> Home </Link></li>
                </ul>
+
                <h3 id="instructionsTitle">Instructions</h3>
 
                <p class="instructions">
@@ -22,11 +23,11 @@ export default class Instructions extends Component {
 
                 <p class="instructions">    
                     <br></br>
-                With gesture control, hold your hand in view of your webcam with the palm facing your computer.
+                  With gesture control, hold your hand in view of your webcam with the palm facing your computer.
                     <br></br><br></br>
-                If gesture control seems laggy or is not working, try refreshing your page.
+                  If gesture control seems laggy or is not working, try refreshing your page.
                     <br></br>
-                You can also try adjusting the distance of your hand from the webcam.
+                  You can also try adjusting the distance of your hand from the webcam.
                 </p>
            </div>
         );
