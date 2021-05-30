@@ -58,9 +58,9 @@ export default class Home extends Component {
                 <ul>
                         <br></br>
                         <br></br>
-                    <li><Link id="gestureLink" to='/game-gesture'> Play (Gesture Control) </Link></li>
-                        <br></br>
                     <li><Link id="mouseLink" to='/game-mouse'> Play (Mouse Control) </Link></li>
+                        <br></br>
+                    <li><Link id="gestureLink" to='/game-gesture'> Play (Gesture Control) </Link></li>
                         <br></br>
                     <li><Link id="instructionsLink" to='/instructions'> Instructions </Link></li>
                 </ul>

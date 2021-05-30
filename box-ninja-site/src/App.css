@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Bungee);
-@import url(https://fonts.googleapis.com/css?family=Arvo);
 @import url(https://fonts.googleapis.com/css?family=Dosis);
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
@@ -91,6 +90,7 @@ script #boxes {
     color: rgba(255, 255, 255, 0.75);
     opacity: 1;
     font-family: "Bungee", Bungee Shade;
+    text-decoration: none;
 }
 
 #instructionsLink {
@@ -103,6 +103,7 @@ script #boxes {
     color: #00ff00;
     opacity: 1;
     font-family: "Bungee", Bungee Shade;
+    text-decoration: none;
 }
 
 #mouseLink {
@@ -117,6 +118,7 @@ script #boxes {
     top: 20px;
     opacity: 1;
     font-family: "Bungee", Bungee Shade;
+    text-decoration: none;
 }
 
 
@@ -133,18 +135,8 @@ script #boxes {
     /*color: rgba(255,255,255,.75);*/
     opacity: 1;
     font-family: "Bungee", Bungee Shade;
+    text-decoration: none;
 }
-
-/*
-#links {
-    position:relative;
-    top: 400px;
-    left: 220px;
-    font-size: 1.8px;
-    font-size: 1.8vw;
-}
-*/
-
 
 body, .outer {
     position: relative;
