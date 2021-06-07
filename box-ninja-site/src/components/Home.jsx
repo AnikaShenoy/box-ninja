@@ -28,19 +28,21 @@ export default class Home extends Component {
             <div>
                 <h1 id="title">Box Ninja</h1>
                 <h3 id="points"></h3>
-
-                <ul>
-                        <br></br>
-                        <br></br>
-                    <li><Link id="mouseLink" to='/game-mouse'> Play (Mouse Control) </Link></li>
-                        <br></br>
-                    <li><Link id="gestureLink" to='/game-gesture'> Play (Gesture Control) </Link></li>
-                        <br></br>
-                    <li><Link id="instructionsLink" to='/instructions'> Instructions </Link></li>
-                </ul>
-    
-                <canvas id="flex-container"></canvas>
-    
+                <span>
+                    <ul>
+                            <br></br>
+                            <br></br>
+                        <li><Link id="mouseLink" to='/game-mouse'> Play (Mouse Control) </Link></li>
+                            <br></br>
+                        <li><Link id="gestureLink" to='/game-gesture'> Play (Gesture Control) </Link></li>
+                            <br></br>
+                        <li><Link id="instructionsLink" to='/instructions'> Instructions </Link></li>
+                    </ul>
+                </span>
+                
+                <span>
+                    <canvas id="flex-container"></canvas>
+                </span>
             </div>
         );
     }    

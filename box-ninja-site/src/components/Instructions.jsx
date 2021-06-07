@@ -23,10 +23,12 @@ export default class Instructions extends Component {
 
                 <p class="instructions">    
                     <br></br>
-                  With gesture control, hold your hand in view of your webcam with the palm facing your computer.
+                  With gesture control, hold your hand in view of your webcam with the palm facing your computer. 
+                    <br></br><br></br>
+                  Make sure your face is not included in the view. 
                     <br></br><br></br>
                   If gesture control seems laggy or is not working, try refreshing your page.
-                    <br></br>
+                    <br></br><br></br>
                   You can also try adjusting the distance of your hand from the webcam.
                 </p>
            </div>

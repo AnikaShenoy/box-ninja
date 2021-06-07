@@ -40,22 +40,22 @@ function onWindowResize(){
 
 //Menu Cube Properties
 const geometry_menu = new THREE.BoxGeometry();
-const texture_menu = new THREE.TextureLoader().load("images/hand_control.png")
+const texture_menu = new THREE.TextureLoader().load("images/neon-green.png")
 const material_menu = new THREE.MeshBasicMaterial( { 
     color: 0x00ff00,
     map: texture_menu,
     side: THREE.DoubleSide,
 } );
 const cube_menu = new THREE.Mesh( geometry_menu, material_menu );
-cube_menu.scale.x = Math.min(window.innerWidth/500, 2);
-cube_menu.scale.y = Math.min(window.innerWidth/500, 2);
-cube_menu.scale.z = Math.min(window.innerWidth/500, 2);
+cube_menu.scale.x = Math.min(window.innerWidth/200, 2);
+cube_menu.scale.y = Math.min(window.innerWidth/200, 2);
+cube_menu.scale.z = Math.min(window.innerWidth/200, 2);
 scene.add(cube_menu);
 
 
 //Instructions Cube Properties
 const geometry_inst = new THREE.BoxGeometry();
-const texture_inst = new THREE.TextureLoader().load("images/mouse_control.png")
+const texture_inst = new THREE.TextureLoader().load("images/neon-green.png")
 const material_inst = new THREE.MeshBasicMaterial( { 
     color: 0x00ff00,
     map: texture_inst,
@@ -63,9 +63,9 @@ const material_inst = new THREE.MeshBasicMaterial( {
 } );
 const cube_inst = new THREE.Mesh(geometry_inst, material_inst);
 scene.add(cube_inst);
-cube_inst.scale.x = Math.min(window.innerWidth/500, 2);
-cube_inst.scale.y = Math.min(window.innerWidth/500, 2);
-cube_inst.scale.z = Math.min(window.innerWidth/500, 2);
+cube_inst.scale.x = Math.min(window.innerWidth/200, 2);
+cube_inst.scale.y = Math.min(window.innerWidth/200, 2);
+cube_inst.scale.z = Math.min(window.innerWidth/200, 2);
 
 /*
 var a = document.createElement('a');  
@@ -93,13 +93,13 @@ function animate(){
     cube_menu.rotation.x -= 0.02;
     cube_menu.rotation.y -= 0.02;
     cube_menu.rotation.z += 0.02;
-    cube_menu.position.x = Math.min(window.innerWidth/500, 2);
+    cube_menu.position.x = Math.min(window.innerWidth/200, 2);
 
     
     cube_inst.rotation.x += 0.02;
     cube_inst.rotation.y += 0.02;
     cube_inst.rotation.z += 0.02;
-    cube_inst.position.x = -1 * Math.min(window.innerWidth/500, 2);
+    cube_inst.position.x = -1 * Math.min(window.innerWidth/200, 2);
 
     // bouncing - menu cube 
     if (bounceControl_m) {
